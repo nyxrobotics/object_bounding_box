@@ -139,7 +139,7 @@ def main(context, rand_sample, spin_res, make_sphere):
         sphere_me = bpy.data.meshes.new('Bound Samples')
         dest_ob = bpy.data.objects.new('Bound Samples',sphere_me)
         sample_sphere.to_mesh(sphere_me)
-        context.scene.objects.link(dest_ob)
+        context.collection.objects.link(dest_ob)
         sample_sphere.free()
     
     bme.free() 
